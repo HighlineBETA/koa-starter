@@ -7,6 +7,8 @@ const { makeExecutableSchema } = require('graphql-tools')
 const router = new Router()
 
 const schema = makeExecutableSchema({
+  pretty: true,
+  debug: process.env.NODE_ENV !== 'production',
   typeDefs: `
     type Query {
       viewer: Viewer
@@ -19,7 +21,7 @@ const schema = makeExecutableSchema({
   resolvers: () => {
     Query: {
       viewer: () => ({
-        id: 0,
+        id: '0',
       })
     }
   },
@@ -28,6 +30,6 @@ const schema = makeExecutableSchema({
 router
   .post('/graphql', graphqlKoa({ schema }))
   .get('/graphql', graphqlKoa({ schema }))
-  .get('/graphiql', graphiqlKoa({ endpointUrl: '/graphql' }))
+  .get('/graphiql', graphiqlKoa({ endpointURL: '/graphql' }))
 
 module.exports = router

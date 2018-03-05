@@ -19,12 +19,12 @@ router.get('/', async ctx => {
 
 app.keys = ['ineed', 'better', 'keys']
 app
+  .use(helmet())
+  .use(bodyparser())
+  .use(logger())
   .use(graphqlRouter.routes())
   .use(graphqlRouter.allowedMethods())
   .use(router.routes())
   .use(router.allowedMethods())
-  .use(helmet())
-  .use(bodyparser())
-  .use(logger())
 
 module.exports = app
