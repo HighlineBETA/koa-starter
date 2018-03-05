@@ -9,6 +9,10 @@
   },
   "author": "Rohan Nair <rohan@highlinebeta.com>",
   "dependencies": {
+    "apollo-server-koa": "^1.3.2",
+    "dotenv": "^5.0.1",
+    "graphql": "^0.13.1",
+    "graphql-tools": "^2.21.0",
     "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
     "koa-cors": "^0.0.16",
