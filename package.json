@@ -9,14 +9,14 @@
   "author": "Rohan Nair <rohan@highlinebeta.com>",
   "private": true,
   "lint-staged": {
-    "*.{js,json}": ["prettier --write", "git add"]
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "apollo-server-koa": "^1.3.2",
     "dotenv": "^5.0.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-prettier": "^2.6.0",
     "graphql": "^0.13.1",
     "graphql-tools": "^2.21.0",
     "koa": "^2.5.0",
@@ -25,11 +25,18 @@
     "koa-helmet": "^3.3.0",
     "koa-logger": "^3.1.0",
     "koa-router": "^7.4.0",
-    "lint-staged": "^7.0.0"
   },
   "devDependencies": {
     "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
     "nodemon": "^1.17.1",
     "prettier": "^1.11.1"
   }
