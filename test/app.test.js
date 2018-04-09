@@ -6,5 +6,5 @@ const server = app.listen()
 test('/', async () => {
   const response = await request(server).get('/')
   expect(response.status).toBe(200)
-  expect(response.body).toEqual({ message: 'Hello world!' })
+  expect(response.body).toEqual({ status: 'healthy' })
 })

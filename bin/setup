@@ -20,9 +20,3 @@ if [[ ! -r ./.env ]]; then
     fi
   fi
 fi
-
-# . ./.env
-# if [[ $DB_CONNECTION_STRING = '' ]]; then
-#   echo "You need to set a DB connection string."
-#   exit 1
-# fi

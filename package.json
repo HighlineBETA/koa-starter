@@ -37,6 +37,7 @@
     "koa-helmet": "^3.3.0",
     "koa-logger": "^3.1.0",
     "koa-router": "^7.4.0",
+    "npm": "^5.8.0",
     "pg": "^7.4.1",
     "sinon": "^4.5.0",
     "supertest": "^3.0.0",
