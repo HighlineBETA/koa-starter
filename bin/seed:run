@@ -1,0 +1,2 @@
+#!/bin/bash
+debug=knex:* yarn knex seed:run
