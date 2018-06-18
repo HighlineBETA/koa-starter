@@ -1,2 +1,0 @@
-#!/bin/bash
-debug=knex:* yarn knex migrate:make $1

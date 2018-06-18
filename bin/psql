@@ -1,5 +1,0 @@
-#!/bin/bash
-
-. ./.env
-
-psql -U $POSTGRES_USER --host 127.0.0.1 $POSTGRES_DB
