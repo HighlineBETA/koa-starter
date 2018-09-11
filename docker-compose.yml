@@ -9,6 +9,15 @@ services:
       - "dbdata:/var/lib/postgresql/data"
     ports:
       - "5432:5432"
+  redis:
+    image: redis:alpine
+    restart: always
+    env_file: .env
+    volumes:
+      - "redisdata:/data"
+    ports:
+      - "6379:6379"
 
 volumes:
   dbdata:
+  redisdata:
