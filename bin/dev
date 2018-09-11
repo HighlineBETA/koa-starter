@@ -1,3 +1,14 @@
 #!/bin/bash
 
-yarn nodemon app/server.js
+rootDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+cd "${rootDir}"
+. "${rootDir}/.env"
+
+[[ ${DOCKER} = 'yes' ]] && docker-compose up -d
+
+cmd="yarn nodemon app/server.js"
+if [[ -x $(which ndb) ]]; then
+  ndb $cmd
+else
+  $cmd
+fi
